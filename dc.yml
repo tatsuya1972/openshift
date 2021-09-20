@@ -1,0 +1,24 @@
+apiVersion: apps.openshift.io/v1
+kind: DeploymentConfig
+metadata:
+  labels:
+    app: webtest
+  name: webtest
+spec:
+  replicas: 1
+  revisionHistoryLimit: 10
+  selector:
+    deploymentconfig: webtest
+  template:
+    metadata:
+      labels:
+        deploymentconfig: webtest
+    spec:
+      containers:
+      - image: quay.io/e27867/webtest
+        name: webtest
+        ports:
+        - containerPort: 9080
+          protocol: TCP
+        - containerPort: 9443
+          protocol: TCP
