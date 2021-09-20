@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    name: "testpod"
+  name: "testpod"
+spec:
+  containers:
+  - image: quay.io/e27867/webtest
+    name: "testpod"
+    ports:
+    - containerPort: 9080
+      protocol: TCP
+    - containerPort: 9443
+      protocol: TCP
+    volumeMounts:
+    - mountPath: "/mnt"
+      name: "pvtest"
+  volumes:
+    - name: "pvtest"
+      persistentVolumeClaim:
+        claimName: "pvctest"
