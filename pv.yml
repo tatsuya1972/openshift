@@ -7,6 +7,8 @@ metadata:
 spec:
   accessModes:
   - ReadWriteOnce
+  - ReadWriteMany
+  - ReadOnlyMany  
   capacity:
     storage: 10Gi
   hostPath:
