@@ -6,7 +6,6 @@ metadata:
   name: webtest
 spec:
   replicas: 1
-  revisionHistoryLimit: 10
   selector:
     deploymentconfig: webtest
   template:
