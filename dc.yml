@@ -1,21 +1,19 @@
 apiVersion: apps.openshift.io/v1
 kind: DeploymentConfig
 metadata:
-  labels:
-    app: webtest
-  name: webtest
+  name: testpod
 spec:
   replicas: 1
   selector:
-    deploymentconfig: webtest
+    app: testpod
   template:
     metadata:
       labels:
-        deploymentconfig: webtest
+        app: testpod
     spec:
       containers:
       - image: quay.io/e27867/webtest
-        name: webtest
+        name: testpod
         ports:
         - containerPort: 9080
           protocol: TCP

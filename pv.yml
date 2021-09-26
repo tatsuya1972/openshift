@@ -7,12 +7,9 @@ metadata:
 spec:
   accessModes:
   - ReadWriteOnce
-  - ReadWriteMany
-  - ReadOnlyMany  
   capacity:
     storage: 10Gi
   hostPath:
     path: /mnt/pv-data/pvtest
-    type: ""
   persistentVolumeReclaimPolicy: Retain
   volumeMode: Filesystem
