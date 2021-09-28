@@ -11,5 +11,5 @@ spec:
     storage: 10Gi
   hostPath:
     path: /mnt/pv-data/pvtest
-  persistentVolumeReclaimPolicy: Retain
+  persistentVolumeReclaimPolicy: Recycle
   volumeMode: Filesystem
