@@ -19,3 +19,10 @@ spec:
           protocol: TCP
         - containerPort: 9443
           protocol: TCP
+        volumeMounts:
+        - mountPath: "/mnt"
+          name: "pvtest"
+      volumes:
+      - name: "pvtest"
+        persistentVolumeClaim:
+          claimName: "pvctest"
