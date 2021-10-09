@@ -1,3 +1,3 @@
 #!/bin/bash
-oc create secret generic localusers --from-file htpasswd=htpasswd -n openshift-config
+oc create secret generic htpass-secret --from-file htpasswd=htpasswd -n openshift-config
 
