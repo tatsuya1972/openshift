@@ -45,9 +45,9 @@ spec:
   identityProviders:
   - htpasswd:
       fileData:
-        name: localusers
+        name: htpass-secret
     mappingMethod: claim
-    name: localusers
+    name: developer
     type: HTPasswd
   tokenConfig:
     accessTokenMaxAgeSeconds: 0
