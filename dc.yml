@@ -26,3 +26,14 @@ spec:
       - name: "pvtest"
         persistentVolumeClaim:
           claimName: "pvctest"
+      env:
+        - name: USERID
+          valueFrom:
+            secretKeyRef:
+              name: secret-userinfo
+              key: username
+        - name: PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: secret-userinfo
+              key: password
