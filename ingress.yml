@@ -1,0 +1,13 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: testpod
+spec:
+  rules:
+    - host: testpod-test.apps-crc.testing
+  http:
+    paths:
+      - path: /WebTest
+        backend:
+          servicename: testpod
+          serviceport: 9080
