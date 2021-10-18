@@ -5,7 +5,7 @@ metadata:
 spec:
   host: testpod-test.apps-crc.testing
   port:
-    targetPort: 9080-tcp
+    targetPort: 9080
   to:
     kind: Service
     name: testpod
