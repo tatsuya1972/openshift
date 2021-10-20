@@ -3,7 +3,7 @@ kind: DeploymentConfig
 metadata:
   name: testpod
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     app: testpod
   template:
@@ -22,6 +22,13 @@ spec:
         volumeMounts:
         - mountPath: "/mnt"
           name: "pvtest"
+        resources:
+          requests:
+            cpu: 10m
+            memory: 20Mi
+          limits:
+            cpu: 50m
+            memory: 100Mi
       volumes:
       - name: "pvtest"
         persistentVolumeClaim:

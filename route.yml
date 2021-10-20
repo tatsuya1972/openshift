@@ -5,7 +5,11 @@ metadata:
 spec:
   host: testpod-test.apps-crc.testing
   port:
-    targetPort: 9080
+    targetPort: 9080-tcp
+#  tls:
+#    termination: edge
+#    termination: reencrypt
+#    termination: passthrough
   to:
     kind: Service
     name: testpod
