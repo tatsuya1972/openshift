@@ -11,6 +11,8 @@ spec:
       labels:
         app: testpod
     spec:
+      nodeSelector:
+        tier: silver
       containers:
       - image: quay.io/e27867/webtest
         name: testpod
